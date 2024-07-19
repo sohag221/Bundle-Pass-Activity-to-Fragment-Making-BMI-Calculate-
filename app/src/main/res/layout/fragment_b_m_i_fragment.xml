@@ -3,38 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BMI_fragment"
     android:orientation="vertical"
-    android:background="#E2EBE2"
+
 
     >
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result of BMI"
+        android:backgroundTint="#03A9F4"
+        app:cardCornerRadius="130dp"
+        android:elevation="34dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:defaultFocusHighlightEnabled="true"
 
-        />
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/result"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Text"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
+        >
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result of BMI"
+
+            />
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Text"
+            android:textColor="#E0C2C2"
+            android:textSize="22sp"
+            android:textStyle="bold"
+             android:layout_marginTop="150dp"
+            />
+
+
+    </androidx.cardview.widget.CardView>
 
 
 

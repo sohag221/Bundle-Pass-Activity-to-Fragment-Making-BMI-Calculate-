@@ -10,7 +10,7 @@ import com.example.bmicalculator.databinding.FragmentBMIFragmentBinding
 
 class BMI_fragment : Fragment() {
 
-    lateinit var binding: FragmentBMIFragmentBinding
+
 
     lateinit var result : TextView
 
@@ -28,10 +28,8 @@ class BMI_fragment : Fragment() {
 
         val bmi:Double = ((weight*1000)/(height*height)).toDouble()
         result.text = "Your BMI is : $bmi"
-
         return view
     }
-
 
 
 }

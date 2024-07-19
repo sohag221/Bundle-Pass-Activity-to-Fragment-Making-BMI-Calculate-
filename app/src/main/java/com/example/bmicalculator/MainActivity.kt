@@ -32,15 +32,19 @@ class MainActivity : AppCompatActivity() {
 
         binding.calculateButton.setOnClickListener {
             if (!binding.weight.text.isEmpty() && !binding.height.text.isEmpty()){
-                val weiht = binding.weight.text.toString().toInt()
-                val height = binding.height.text.toString().toInt()
+                if (bmiFragment.isVisible){
+                    Toast.makeText(this, "Removing Previous Result", Toast.LENGTH_SHORT).show()
+                }else{
+                    val weiht = binding.weight.text.toString().toInt()
+                    val height = binding.height.text.toString().toInt()
 
-                val bundle= Bundle()
-                bundle.putInt("weight",weiht)
-                bundle.putInt("height",height)
-                bmiFragment.arguments=bundle
-                ft.add(R.id.fram_layout,bmiFragment)
-                ft.commit()
+                    val bundle= Bundle()
+                    bundle.putInt("weight",weiht)
+                    bundle.putInt("height",height)
+                    bmiFragment.arguments=bundle
+                    ft.add(R.id.fram_layout,bmiFragment)
+                    ft.commit()
+                }
             }else{
                 Toast.makeText(this, "Enter weight and height", Toast.LENGTH_SHORT).show()
             }
